@@ -1,0 +1,176 @@
+@font-face {
+    font-family: rajhandi;
+    src: url(fonts/rajdhani-regular.ttf);
+}
+
+:root {
+    --portfolio-box-height: 600px;
+    --portfolio-box-width: 400px;
+    --portfolio-image-height: 120px;
+    --portfolio-item-spacing: 84px;
+
+    --social-image-height: 64px;
+    --social-image-padding: 12px;
+    --social-num-elements: 3;
+
+    --project-box-height: 100px;
+    --project-box-width: 460px;
+
+    font-family: rajhandi;
+}
+
+body {
+    background-image: url("images/background-1.webp");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content-container {
+    position: absolute;
+    top: calc((100% - 600px)/2);
+    left: calc(100% / 5);
+}
+
+/* Container for Profile Section */
+.content-container .portfolio {
+    /* Positioning */
+    float: left;
+
+    /* Element Styling */
+    background-color: rgba(101, 101, 101, .9);
+    width: var(--portfolio-box-width);
+    height: var(--portfolio-box-height);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75);
+    border-radius: 100px;
+}
+
+/* Portoflio Image */
+.content-container .portfolio .portfolio-image {
+    /* Positioning */
+    position: relative;
+    left: calc(var(--portfolio-box-width) / 2 - var(--portfolio-image-height) / 2);
+    top: 120px;
+
+    /* Styling */
+    border-radius: 50%;
+    width: var(--portfolio-image-height);
+    height: var(--portfolio-image-height);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.65);
+}
+
+/* Name Text */
+.content-container .portfolio .name-text {
+    position: relative;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    top: var(--portfolio-item-spacing);
+    margin-bottom: 0px;
+}
+
+/* Description Text */
+.content-container .portfolio .description-text {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    top: var(--portfolio-item-spacing);
+}
+
+/* Container for Social Buttons */
+.content-container .portfolio .logo-container {
+    position: relative;
+    top: var(--portfolio-item-spacing);
+    left: calc((var(--portfolio-box-width) - var(--social-num-elements) * var(--social-image-height) - var(--social-image-padding) * (var(--social-num-elements) - 1)) / 2);
+}
+
+/* Social Buttons */
+.content-container .portfolio .logo-container .logo {
+    width: 64px;
+    height: 64px;
+    margin-right: var(--social-image-padding);
+}
+
+.content-container .portfolio .logo-container .logo:nth-child(3) {
+    margin-right: 0px;
+}
+
+/* Container for Projects */
+.content-container .projects {
+    /* Positioning */
+    display: inline-block;
+    margin-left: 60px;
+
+    /* Container Sizing */
+    height: 600px;
+}
+
+/* Individual Projects Elements */
+.content-container .projects .project {
+    /* Positioning */
+    position: relative;
+    top: calc((var(--portfolio-box-height) - (var(--project-box-height) * 4 + 20px * 3)) / 2 - 40px);
+
+    /* Element Styling */
+    background-color: rgba(101, 101, 101, .9);
+    width: var(--project-box-width);
+    height: var(--project-box-height);
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75);
+    margin-bottom: 20px;
+}
+
+/* Project Icon Styling */
+.content-container .projects .project .project-icon {
+    position: relative;
+    top: calc(var(--project-box-height) / 2 - 32px / 2);
+    left: calc(var(--project-box-height) / 2 - 32px / 2);
+    font-size: 32px;
+    float: left;
+}
+
+/* Project Image Styling */
+.content-container .projects .project .project-image {
+    position: relative;
+    top: calc(var(--project-box-height) / 2 - 64px / 2);
+    left: calc(var(--project-box-height) / 2 - 64px / 2);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.65);
+    float: left;
+}
+
+/* Project Spacing */
+.content-container .projects .project .projects-heading {
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    left: 60px;
+    top: 32px;
+}
+
+.content-container .projects .project .title {
+    position: relative;
+    left: 25px;
+    top: 10px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.content-container .projects .project .description {
+    position: relative;
+    left: 100px;
+    top: -25px;
+    font-size: 20px;
+}
+
+.content-container .projects .project .slack-heading {
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    left: 30px;
+    top: 32px;
+}
